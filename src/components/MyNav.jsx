@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
 
 function MyNav() {
   return (
@@ -22,18 +23,24 @@ function MyNav() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link className="text-danger fw-semibold" href="#action1">
-              Home
+            <Nav.Link className="text-danger fw-semibold ms-2" href="#action1">
+              <Link to="/" className="navLink text-danger">
+                {" "}
+                Home
+              </Link>
             </Nav.Link>
-            <Nav.Link className="text-danger fw-semibold" href="#action2">
-              Link
+            <Nav.Link className="text-danger fw-semibold ms-2" href="#action2">
+              <Link to="/Co" className="navLink text-danger">
+                {" "}
+                Consigliati
+              </Link>
             </Nav.Link>
-            <NavDropdown
+            {/* <NavDropdown
               className="bg-danger ms-1 fw-bold"
               title="Link"
               id="navbarScrollingDropdown"
-            >
-              <NavDropdown.Item className="text-danger bg-dark" href="#action3">
+            > */}
+            {/* <NavDropdown.Item className="text-danger bg-dark" href="#action3">
                 Action
               </NavDropdown.Item>
               <NavDropdown.Item className="text-danger bg-dark" href="#action4">
@@ -43,7 +50,7 @@ function MyNav() {
               <NavDropdown.Item className="text-danger bg-dark" href="#action5">
                 Something else here
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
           {/* <Form className="d-flex">
             <Form.Control
